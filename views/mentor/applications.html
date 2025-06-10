@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Mentor Applications</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>My Students</span>
+              <span class="badge">5</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="applications.html">
+              <i class="fas fa-user-plus"></i>
+              <span>Applications</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Student Applications</h1>
+          <p>Review and manage mentorship requests</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="filter-group">
+            <label for="statusFilter">Filter by Status</label>
+            <select id="statusFilter">
+              <option value="all">All Applications</option>
+              <option value="pending">Pending</option>
+              <option value="accepted">Accepted</option>
+              <option value="declined">Declined</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="applications-container">
+          <div class="application-card pending">
+            <div class="application-header">
+              <div class="student-info">
+                <img src="../../assets/images/student1.jpg" alt="Student">
+                <div>
+                  <h3>Michael Teka</h3>
+                  <p>Computer Science Student</p>
+                  <div class="student-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.5</span>
+                    <span>(10 sessions)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="application-meta">
+                <span class="status-badge pending">Pending</span>
+                <span class="application-date">Requested: May 15, 2023</span>
+              </div>
+            </div>
+            
+            <div class="application-details">
+              <div class="detail-group">
+                <h4>Course</h4>
+                <p>Advanced Python Programming</p>
+              </div>
+              <div class="detail-group">
+                <h4>Requested Sessions</h4>
+                <p>2 sessions/week (1.5 hours each)</p>
+              </div>
+              <div class="detail-group">
+                <h4>Student Message</h4>
+                <p>"I need help with object-oriented programming concepts and Django framework for my final year project."</p>
+              </div>
+            </div>
+            
+            <div class="application-actions">
+              <button class="btn btn-primary">
+                <i class="fas fa-check"></i> Accept
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-times"></i> Decline
+              </button>
+              <button class="btn btn-outline" onclick="location.href='../chat.html'">
+                <i class="fas fa-comment"></i> Message
+              </button>
+            </div>
+          </div>
+          
+          <div class="application-card pending">
+            <div class="application-header">
+              <div class="student-info">
+                <img src="../../assets/images/student2.jpg" alt="Student">
+                <div>
+                  <h3>Amina Mohammed</h3>
+                  <p>Engineering Student</p>
+                  <div class="student-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.2</span>
+                    <span>(5 sessions)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="application-meta">
+                <span class="status-badge pending">Pending</span>
+                <span class="application-date">Requested: May 14, 2023</span>
+              </div>
+            </div>
+            
+            <div class="application-details">
+              <div class="detail-group">
+                <h4>Course</h4>
+                <p>Data Structures & Algorithms</p>
+              </div>
+              <div class="detail-group">
+                <h4>Requested Sessions</h4>
+                <p>1 session/week (2 hours)</p>
+              </div>
+              <div class="detail-group">
+                <h4>Student Message</h4>
+                <p>"I'm struggling with tree traversals and graph algorithms. Need help preparing for exams."</p>
+              </div>
+            </div>
+            
+            <div class="application-actions">
+              <button class="btn btn-primary">
+                <i class="fas fa-check"></i> Accept
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-times"></i> Decline
+              </button>
+              <button class="btn btn-outline" onclick="location.href='../chat.html'">
+                <i class="fas fa-comment"></i> Message
+              </button>
+            </div>
+          </div>
+          
+          <div class="application-card accepted">
+            <div class="application-header">
+              <div class="student-info">
+                <img src="../../assets/images/student3.jpg" alt="Student">
+                <div>
+                  <h3>Daniel Assefa</h3>
+                  <p>Computer Science Student</p>
+                  <div class="student-rating">
+                    <i class="fas fa-star"></i>
+                    <span>4.7</span>
+                    <span>(15 sessions)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="application-meta">
+                <span class="status-badge accepted">Accepted</span>
+                <span class="application-date">Started: May 10, 2023</span>
+              </div>
+            </div>
+            
+            <div class="application-details">
+              <div class="detail-group">
+                <h4>Course</h4>
+                <p>Web Development</p>
+              </div>
+              <div class="detail-group">
+                <h4>Current Sessions</h4>
+                <p>2 sessions/week (1 hour each)</p>
+              </div>
+              <div class="detail-group">
+                <h4>Progress</h4>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 65%"></div>
+                </div>
+                <span>65% completed</span>
+              </div>
+            </div>
+            
+            <div class="application-actions">
+              <button class="btn btn-outline">
+                <i class="fas fa-calendar"></i> Reschedule
+              </button>
+              <button class="btn btn-outline" onclick="location.href='../chat.html'">
+                <i class="fas fa-comment"></i> Message
+              </button>
+              <button class="btn btn-outline">
+                <i class="fas fa-chart-line"></i> Progress
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Filter applications by status
+    document.getElementById('statusFilter').addEventListener('change', function() {
+      const status = this.value;
+      const applications = document.querySelectorAll('.application-card');
+      
+      applications.forEach(app => {
+        if (status === 'all' || app.classList.contains(status)) {
+          app.style.display = 'block';
+        } else {
+          app.style.display = 'none';
+        }
+      });
+    });
+
+    // Accept/Decline buttons
+    document.querySelectorAll('.application-actions .btn-primary').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const card = this.closest('.application-card');
+        card.classList.remove('pending');
+        card.classList.add('accepted');
+        card.querySelector('.status-badge').className = 'status-badge accepted';
+        card.querySelector('.status-badge').textContent = 'Accepted';
+        alert('Application accepted! A session has been scheduled.');
+      });
+    });
+
+    document.querySelectorAll('.application-actions .btn-outline').forEach(btn => {
+      if (btn.textContent.includes('Decline')) {
+        btn.addEventListener('click', function() {
+          if (confirm('Are you sure you want to decline this application?')) {
+            const card = this.closest('.application-card');
+            card.classList.remove('pending');
+            card.classList.add('declined');
+            card.querySelector('.status-badge').className = 'status-badge declined';
+            card.querySelector('.status-badge').textContent = 'Declined';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

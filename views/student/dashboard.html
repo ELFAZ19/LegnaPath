@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Student Dashboard</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active">
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#mentor-section">
+              <i class="fas fa-user-graduate"></i>
+              <span>Find Mentors</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Sessions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-line"></i>
+              <span>Progress</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-book"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="themeToggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="toggle-ball"></span>
+        </button>
+      </div>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Welcome back, <span id="studentName">Student</span>!</h1>
+          <p>Ready to continue your learning journey?</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" id="mentorSearch" placeholder="Search mentors, courses...">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          <div class="user-menu">
+            <div class="notification-bell">
+              <i class="fas fa-bell"></i>
+              <span class="badge">2</span>
+            </div>
+            
+            <div class="user-profile">
+              <img src="../../assets/images/default-avatar.png" alt="User Profile" id="userAvatar">
+              <div class="user-info">
+                <span class="username" id="displayName">John Doe</span>
+                <span class="user-role">Student</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="status-cards">
+          <div class="status-card">
+            <div class="card-icon pending">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-content">
+              <h3>Pending Requests</h3>
+              <p id="pendingRequests">2 mentors reviewing your requests</p>
+            </div>
+            <div class="card-progress">
+              <div class="progress-bar">
+                <div class="progress" style="width: 50%"></div>
+              </div>
+              <span>50%</span>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon active">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-content">
+              <h3>Active Sessions</h3>
+              <p id="activeSessions">3 scheduled this week</p>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon completed">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card-content">
+              <h3>Completed</h3>
+              <p id="completedSessions">5 mentorship sessions</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="action-buttons">
+            <button class="action-btn" onclick="location.href='#mentor-section'">
+              <i class="fas fa-search"></i>
+              Find a Mentor
+            </button>
+            <button class="action-btn" id="scheduleSessionBtn">
+              <i class="fas fa-calendar-plus"></i>
+              Schedule Session
+            </button>
+            <button class="action-btn" onclick="location.href='../chat.html'">
+              <i class="fas fa-comment-dots"></i>
+              Message Center
+            </button>
+          </div>
+        </div>
+        
+        <div class="mentor-section" id="mentor-section">
+          <div class="section-header">
+            <h2>Recommended Mentors</h2>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          
+          <div class="mentor-filters">
+            <div class="filter-group">
+              <label for="courseFilter">Course</label>
+              <select id="courseFilter">
+                <option value="all">All Courses</option>
+                <option value="programming">Programming</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="languageFilter">Language</label>
+              <select id="languageFilter">
+                <option value="all">Any Language</option>
+                <option value="english">English</option>
+                <option value="amharic">Amharic</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="availabilityFilter">Availability</label>
+              <select id="availabilityFilter">
+                <option value="all">Any Time</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </div>
+            
+            <button class="filter-btn" id="applyFilters">Apply Filters</button>
+          </div>
+          
+          <div class="mentor-grid" id="mentorGrid">
+            <!-- Mentor cards will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="modal" id="mentorModal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body" id="mentorModalBody">
+          <!-- Content will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal" id="paymentModal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body" id="paymentModalBody">
+          <!-- Content will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Reports & Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="mentors.html">
+              <i class="fas fa-user-graduate"></i>
+              <span>Mentors</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="reports.html">
+              <i class="fas fa-chart-pie"></i>
+              <span>Reports</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-wallet"></i>
+              <span>Payments</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Reports & Analytics</h1>
+          <p>Platform performance metrics and insights</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="filter-group">
+            <label for="timePeriod">Time Period</label>
+            <select id="timePeriod">
+              <option value="7days">Last 7 Days</option>
+              <option value="30days" selected>Last 30 Days</option>
+              <option value="90days">Last 90 Days</option>
+              <option value="year">This Year</option>
+            </select>
+          </div>
+          <button class="btn btn-outline">
+            <i class="fas fa-download"></i> Export Report
+          </button>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="reports-container">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-value">1,245</div>
+              <div class="metric-label">Total Users</div>
+              <div class="metric-change positive">
+                <i class="fas fa-arrow-up"></i> 12% from last period
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">86</div>
+              <div class="metric-label">Active Mentors</div>
+              <div class="metric-change positive">
+                <i class="fas fa-arrow-up"></i> 8% from last period
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">324</div>
+              <div class="metric-label">Weekly Sessions</div>
+              <div class="metric-change positive">
+                <i class="fas fa-arrow-up"></i> 15% from last period
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value">24,500 ETB</div>
+              <div class="metric-label">Platform Revenue</div>
+              <div class="metric-change positive">
+                <i class="fas fa-arrow-up"></i> 18% from last period
+              </div>
+            </div>
+          </div>
+          
+          <div class="chart-row">
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>User Growth</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="userGrowthChart"></canvas>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Session Types</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="sessionTypeChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chart-row">
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Revenue Breakdown</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-header">
+                <h3>Top Courses</h3>
+              </div>
+              <div class="chart-container">
+                <canvas id="topCoursesChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="data-table">
+            <h3>Recent Mentorship Sessions</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Mentor</th>
+                  <th>Course</th>
+                  <th>Date</th>
+                  <th>Duration</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Michael Teka</td>
+                  <td>Dr. Sarah Johnson</td>
+                  <td>Python Programming</td>
+                  <td>May 18, 2023</td>
+                  <td>1.5 hours</td>
+                  <td>
+                    <i class="fas fa-star"></i> 5.0
+                  </td>
+                </tr>
+                <tr>
+                  <td>Amina Mohammed</td>
+                  <td>Prof. Alemayehu</td>
+                  <td>Calculus</td>
+                  <td>May 17, 2023</td>
+                  <td>1 hour</td>
+                  <td>
+                    <i class="fas fa-star"></i> 4.5
+                  </td>
+                </tr>
+                <tr>
+                  <td>Daniel Assefa</td>
+                  <td>Michael Teka</td>
+                  <td>Web Development</td>
+                  <td>May 16, 2023</td>
+                  <td>2 hours</td>
+                  <td>
+                    <i class="fas fa-star"></i> 4.0
+                  </td>
+                </tr>
+                <tr>
+                  <td>Helen Kebede</td>
+                  <td>Dr. Sarah Johnson</td>
+                  <td>Data Structures</td>
+                  <td>May 15, 2023</td>
+                  <td>1 hour</td>
+                  <td>
+                    <i class="fas fa-star"></i> 5.0
+                  </td>
+                </tr>
+                <tr>
+                  <td>Yohannes Abebe</td>
+                  <td>Amina Mohammed</td>
+                  <td>Linear Algebra</td>
+                  <td>May 14, 2023</td>
+                  <td>1.5 hours</td>
+                  <td>
+                    <i class="fas fa-star"></i> 4.5
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

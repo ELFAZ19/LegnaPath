@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Admin Dashboard</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>Mentors</span>
+              <span class="badge">12</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Sessions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-pie"></i>
+              <span>Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-wallet"></i>
+              <span>Payments</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="themeToggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <span class="toggle-ball"></span>
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Admin Dashboard</h1>
+          <p>Manage the LegnaPath platform</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search users, reports...">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          <div class="user-menu">
+            <div class="notification-bell">
+              <i class="fas fa-bell"></i>
+              <span class="badge">5</span>
+            </div>
+            
+            <div class="user-profile">
+              <img src="../../assets/images/default-avatar.png" alt="User Profile">
+              <div class="user-info">
+                <span class="username">Admin User</span>
+                <span class="user-role">Administrator</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <!-- Stats Cards -->
+        <div class="status-cards">
+          <div class="status-card">
+            <div class="card-icon users">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="card-content">
+              <h3>Total Users</h3>
+              <p>1,245 registered users</p>
+            </div>
+            <div class="card-growth">
+              <i class="fas fa-arrow-up"></i>
+              <span>12% this month</span>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon mentors">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="card-content">
+              <h3>Active Mentors</h3>
+              <p>86 qualified mentors</p>
+            </div>
+            <div class="card-growth">
+              <i class="fas fa-arrow-up"></i>
+              <span>8% this month</span>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon sessions">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="card-content">
+              <h3>Weekly Sessions</h3>
+              <p>324 scheduled sessions</p>
+            </div>
+            <div class="card-growth">
+              <i class="fas fa-arrow-up"></i>
+              <span>15% this week</span>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon revenue">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="card-content">
+              <h3>Platform Revenue</h3>
+              <p>24,500 ETB this month</p>
+            </div>
+            <div class="card-growth">
+              <i class="fas fa-arrow-up"></i>
+              <span>18% this month</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Charts Row -->
+        <div class="charts-row">
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>User Growth</h3>
+              <select class="chart-period">
+                <option>Last 7 Days</option>
+                <option>Last 30 Days</option>
+                <option selected>Last 90 Days</option>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="userGrowthChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Revenue Breakdown</h3>
+              <select class="chart-period">
+                <option>Last 7 Days</option>
+                <option>Last 30 Days</option>
+                <option selected>Last 90 Days</option>
+                <option>This Year</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="mentor-section">
+          <div class="section-header">
+            <h2>Recent Activity</h2>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="activity-content">
+                <p><strong>Michael Teka</strong> registered as a new mentor</p>
+                <span class="activity-time">2 hours ago</span>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="activity-content">
+                <p><strong>Amina Mohammed</strong> started a mentorship with <strong>Dr. Sarah Johnson</strong></p>
+                <span class="activity-time">5 hours ago</span>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-comment-dollar"></i>
+              </div>
+              <div class="activity-content">
+                <p><strong>Daniel Assefa</strong> completed payment for programming course</p>
+                <span class="activity-time">1 day ago</span>
+              </div>
+            </div>
+            
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="activity-content">
+                <p><strong>Helen Kebede</strong> rated <strong>Prof. Alemayehu</strong> with 5 stars</p>
+                <span class="activity-time">2 days ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pending Approvals -->
+        <div class="mentor-section">
+          <div class="section-header">
+            <h2>Pending Mentor Approvals</h2>
+            <a href="#" class="view-all">View All</a>
+          </div>
+          
+          <div class="approvals-grid">
+            <div class="approval-card">
+              <div class="approval-profile">
+                <img src="../../assets/images/mentor-pending1.jpg" alt="Applicant">
+                <h4>Michael Teka</h4>
+                <p>Software Engineering</p>
+                <div class="approval-rating">
+                  <i class="fas fa-star"></i>
+                  <span>4.8</span>
+                </div>
+              </div>
+              <div class="approval-details">
+                <p><strong>Experience:</strong> 5 years at Google</p>
+                <p><strong>Education:</strong> MSc in Computer Science</p>
+                <p><strong>Courses:</strong> Python, JavaScript, System Design</p>
+              </div>
+              <div class="approval-actions">
+                <button class="btn-small btn-primary">Approve</button>
+                <button class="btn-small btn-outline">Review</button>
+              </div>
+            </div>
+            
+            <div class="approval-card">
+              <div class="approval-profile">
+                <img src="../../assets/images/mentor-pending2.jpg" alt="Applicant">
+                <h4>Amina Mohammed</h4>
+                <p>Mathematics</p>
+                <div class="approval-rating">
+                  <i class="fas fa-star"></i>
+                  <span>4.5</span>
+                </div>
+              </div>
+              <div class="approval-details">
+                <p><strong>Experience:</strong> 8 years tutoring</p>
+                <p><strong>Education:</strong> MA in Mathematics</p>
+                <p><strong>Courses:</strong> Calculus, Linear Algebra</p>
+              </div>
+              <div class="approval-actions">
+                <button class="btn-small btn-primary">Approve</button>
+                <button class="btn-small btn-outline">Review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

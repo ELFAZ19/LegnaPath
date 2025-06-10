@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Manage Mentors</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="mentors.html">
+              <i class="fas fa-user-graduate"></i>
+              <span>Mentors</span>
+              <span class="badge">12</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Sessions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-pie"></i>
+              <span>Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-wallet"></i>
+              <span>Payments</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Manage Mentors</h1>
+          <p>Review and manage all mentor accounts</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search mentors...">
+            <i class="fas fa-search"></i>
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-plus"></i> Add New Mentor
+          </button>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="mentors-management">
+          <div class="mentor-filters">
+            <div class="filter-group">
+              <label for="statusFilter">Status</label>
+              <select id="statusFilter">
+                <option value="all">All Mentors</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending Approval</option>
+                <option value="suspended">Suspended</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="specializationFilter">Specialization</label>
+              <select id="specializationFilter">
+                <option value="all">All Specializations</option>
+                <option value="programming">Programming</option>
+                <option value="math">Mathematics</option>
+                <option value="science">Science</option>
+                <option value="business">Business</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label for="ratingFilter">Minimum Rating</label>
+              <select id="ratingFilter">
+                <option value="0">Any Rating</option>
+                <option value="3">3+ Stars</option>
+                <option value="4">4+ Stars</option>
+                <option value="4.5">4.5+ Stars</option>
+              </select>
+            </div>
+            
+            <button class="btn btn-outline">
+              <i class="fas fa-filter"></i> Apply Filters
+            </button>
+          </div>
+          
+          <div class="mentors-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mentor</th>
+                  <th>Specialization</th>
+                  <th>Rating</th>
+                  <th>Students</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="mentor-info">
+                      <img src="../../assets/images/mentor1.jpg" alt="Mentor">
+                      <div>
+                        <h4>Dr. Sarah Johnson</h4>
+                        <p>Computer Science</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Programming, Algorithms</td>
+                  <td>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.8</span>
+                      <span>(24 reviews)</span>
+                    </div>
+                  </td>
+                  <td>15 active</td>
+                  <td><span class="status-badge active">Active</span></td>
+                  <td>
+                    <button class="btn-icon" title="View Profile">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Suspend">
+                      <i class="fas fa-ban"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="mentor-info">
+                      <img src="../../assets/images/mentor2.jpg" alt="Mentor">
+                      <div>
+                        <h4>Michael Teka</h4>
+                        <p>Software Engineering</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Web Development</td>
+                  <td>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.9</span>
+                      <span>(18 reviews)</span>
+                    </div>
+                  </td>
+                  <td>12 active</td>
+                  <td><span class="status-badge active">Active</span></td>
+                  <td>
+                    <button class="btn-icon" title="View Profile">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Suspend">
+                      <i class="fas fa-ban"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="mentor-info">
+                      <img src="../../assets/images/mentor3.jpg" alt="Mentor">
+                      <div>
+                        <h4>Amina Mohammed</h4>
+                        <p>Mathematics</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Calculus, Algebra</td>
+                  <td>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.7</span>
+                      <span>(32 reviews)</span>
+                    </div>
+                  </td>
+                  <td>20 active</td>
+                  <td><span class="status-badge active">Active</span></td>
+                  <td>
+                    <button class="btn-icon" title="View Profile">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon" title="Edit">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-icon" title="Suspend">
+                      <i class="fas fa-ban"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="mentor-info">
+                      <img src="../../assets/images/mentor-pending1.jpg" alt="Mentor">
+                      <div>
+                        <h4>Daniel Assefa</h4>
+                        <p>Data Science</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Machine Learning</td>
+                  <td>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.5</span>
+                      <span>(8 reviews)</span>
+                    </div>
+                  </td>
+                  <td>5 active</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td>
+                    <button class="btn-icon" title="Approve">
+                      <i class="fas fa-check"></i>
+                    </button>
+                    <button class="btn-icon" title="Reject">
+                      <i class="fas fa-times"></i>
+                    </button>
+                    <button class="btn-icon" title="View Profile">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="mentor-info">
+                      <img src="../../assets/images/mentor-pending2.jpg" alt="Mentor">
+                      <div>
+                        <h4>Helen Kebede</h4>
+                        <p>Business</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Finance, Accounting</td>
+                  <td>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <span>4.2</span>
+                      <span>(5 reviews)</span>
+                    </div>
+                  </td>
+                  <td>3 active</td>
+                  <td><span class="status-badge suspended">Suspended</span></td>
+                  <td>
+                    <button class="btn-icon" title="Reactivate">
+                      <i class="fas fa-undo"></i>
+                    </button>
+                    <button class="btn-icon" title="View Profile">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-icon" title="Delete">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="pagination">
+            <button class="btn btn-outline" disabled>
+              <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span>Page 1 of 3</span>
+            <button class="btn btn-outline">
+              Next <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

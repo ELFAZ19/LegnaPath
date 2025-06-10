@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Payment</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>Find Mentors</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="payment.html">
+              <i class="fas fa-wallet"></i>
+              <span>Payments</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Complete Your Payment</h1>
+          <p>Secure payment for your mentorship sessions</p>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="payment-container">
+          <form id="paymentForm">
+            <div class="payment-plan">
+              <h2>Select Your Mentorship Plan</h2>
+              <div class="payment-options">
+                <div class="payment-option selected" data-type="light">
+                  <i class="fas fa-leaf"></i>
+                  <h3>Light</h3>
+                  <p>30 ETB/hr</p>
+                  <p>1-2 sessions/week</p>
+                  <p>Basic course support</p>
+                </div>
+                <div class="payment-option" data-type="medium">
+                  <i class="fas fa-balance-scale"></i>
+                  <h3>Medium</h3>
+                  <p>50 ETB/hr</p>
+                  <p>3-4 sessions/week</p>
+                  <p>Project guidance</p>
+                </div>
+                <div class="payment-option" data-type="heavy">
+                  <i class="fas fa-dumbbell"></i>
+                  <h3>Heavy</h3>
+                  <p>80 ETB/hr</p>
+                  <p>5+ sessions/week</p>
+                  <p>Thesis/complex projects</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-details">
+              <h2>Session Details</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sessionLength">Session Length</label>
+                  <select id="sessionLength">
+                    <option value="1">1 hour</option>
+                    <option value="1.5">1.5 hours</option>
+                    <option value="2">2 hours</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="sessionsPerWeek">Sessions per Week</label>
+                  <input type="number" id="sessionsPerWeek" min="1" max="7" value="2">
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-method">
+              <h2>Payment Method</h2>
+              <div class="form-group">
+                <label for="paymentMethod">Select Payment Method</label>
+                <select id="paymentMethod">
+                  <option value="telebirr">Telebirr</option>
+                  <option value="ebirr">eBirr</option>
+                  <option value="bank">Bank Transfer</option>
+                </select>
+              </div>
+              
+              <div id="paymentMethodDetails" class="payment-method-details">
+                <!-- Dynamic content will be inserted here -->
+              </div>
+            </div>
+            
+            <div class="payment-summary">
+              <h2>Payment Summary</h2>
+              <div class="summary-grid">
+                <div class="summary-details">
+                  <div class="summary-row">
+                    <span>Mentorship Plan:</span>
+                    <span id="planType">Light (30 ETB/hr)</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Session Length:</span>
+                    <span id="sessionLengthDisplay">1 hour</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Sessions per Week:</span>
+                    <span id="sessionsPerWeekDisplay">2</span>
+                  </div>
+                  <div class="summary-row total">
+                    <span>Weekly Total:</span>
+                    <span id="weeklyTotal">60 ETB</span>
+                  </div>
+                  <div class="summary-row total">
+                    <span>Estimated Monthly Total:</span>
+                    <span id="monthlyTotal">240 ETB</span>
+                  </div>
+                </div>
+                
+                <div class="breakdown-details">
+                  <h3>Earnings Breakdown</h3>
+                  <div class="breakdown-row">
+                    <span>Mentor Earnings:</span>
+                    <span id="mentorEarnings">36 ETB (60%)</span>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Platform Fee:</span>
+                    <span id="platformEarnings">12 ETB (20%)</span>
+                  </div>
+                  <div class="breakdown-row">
+                    <span>Host Institution:</span>
+                    <span id="hostEarnings">12 ETB (20%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="payment-actions">
+              <button type="button" class="btn btn-outline" onclick="window.history.back()">Cancel</button>
+              <button type="submit" class="btn btn-primary" id="confirmPayment">Confirm Payment</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="paymentSuccessModal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="payment-success">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>Payment Successful!</h2>
+          <p>Your mentorship request has been confirmed. Your mentor will contact you shortly.</p>
+          <button class="btn btn-primary" onclick="window.location.href='dashboard.html'">Return to Dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/payment.js"></script>
+</body>
+</html>

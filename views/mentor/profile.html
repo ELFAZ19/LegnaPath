@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Mentor Profile</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>My Students</span>
+              <span class="badge">5</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="profile.html">
+              <i class="fas fa-user"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>My Profile</h1>
+          <p>Manage your mentor profile and settings</p>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="profile-container">
+          <form id="mentorProfileForm">
+            <div class="profile-header">
+              <div class="profile-picture">
+                <img src="../../assets/images/mentor1.jpg" alt="Profile Picture" id="profileImage">
+                <button type="button" class="btn btn-outline" id="changePhotoBtn">
+                  <i class="fas fa-camera"></i> Change Photo
+                </button>
+                <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+              </div>
+              <div class="profile-info">
+                <h2 id="profileName">Dr. Sarah Johnson</h2>
+                <p class="profile-title">Senior Computer Science Professor</p>
+                <div class="profile-rating">
+                  <i class="fas fa-star"></i>
+                  <span>4.8</span>
+                  <span>(24 reviews)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="profile-section">
+              <h3>Basic Information</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" value="Sarah" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" value="Johnson" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="sarah.johnson@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" value="+251 912 345 678">
+              </div>
+              <div class="form-group">
+                <label for="title">Professional Title</label>
+                <input type="text" id="title" value="Senior Computer Science Professor" required>
+              </div>
+            </div>
+            
+            <div class="profile-section">
+              <h3>About Me</h3>
+              <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" rows="5" required>With over 10 years of experience in teaching computer science, I specialize in helping students understand complex programming concepts through practical examples and real-world applications. My approach focuses on building strong fundamentals while keeping the learning process engaging and practical.</textarea>
+              </div>
+            </div>
+            
+            <div class="profile-section">
+              <h3>Education & Experience</h3>
+              <div class="form-group">
+                <label for="education">Education</label>
+                <textarea id="education" rows="3" required>PhD in Computer Science, Addis Ababa University (2015)
+MSc in Software Engineering, AAU (2010)
+BSc in Computer Science, AAU (2007)</textarea>
+              </div>
+              <div class="form-group">
+                <label for="experience">Professional Experience</label>
+                <textarea id="experience" rows="3" required>Professor of Computer Science, Addis Ababa University (2015-Present)
+Senior Software Engineer, Tech Solutions Inc. (2010-2015)</textarea>
+              </div>
+            </div>
+            
+            <div class="profile-section">
+              <h3>Mentorship Details</h3>
+              <div class="form-group">
+                <label for="specializations">Specializations</label>
+                <div class="tags-input" id="specializationsContainer">
+                  <span class="tag">Python<i class="fas fa-times"></i></span>
+                  <span class="tag">Java<i class="fas fa-times"></i></span>
+                  <span class="tag">Data Structures<i class="fas fa-times"></i></span>
+                  <span class="tag">Algorithms<i class="fas fa-times"></i></span>
+                  <input type="text" id="specializationsInput" placeholder="Add specialization">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="languages">Languages Spoken</label>
+                <div class="tags-input" id="languagesContainer">
+                  <span class="tag">English<i class="fas fa-times"></i></span>
+                  <span class="tag">Amharic<i class="fas fa-times"></i></span>
+                  <input type="text" id="languagesInput" placeholder="Add language">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="availability">Availability</label>
+                <div class="availability-grid">
+                  <div class="day-availability">
+                    <label>Monday</label>
+                    <input type="text" placeholder="9am-12pm, 2pm-5pm" value="9am-12pm, 2pm-5pm">
+                  </div>
+                  <div class="day-availability">
+                    <label>Tuesday</label>
+                    <input type="text" placeholder="Not available" value="2pm-5pm">
+                  </div>
+                  <div class="day-availability">
+                    <label>Wednesday</label>
+                    <input type="text" placeholder="9am-12pm, 2pm-5pm" value="9am-12pm, 2pm-5pm">
+                  </div>
+                  <div class="day-availability">
+                    <label>Thursday</label>
+                    <input type="text" placeholder="Not available" value="2pm-5pm">
+                  </div>
+                  <div class="day-availability">
+                    <label>Friday</label>
+                    <input type="text" placeholder="9am-12pm" value="9am-12pm">
+                  </div>
+                  <div class="day-availability">
+                    <label>Saturday</label>
+                    <input type="text" placeholder="Not available">
+                  </div>
+                  <div class="day-availability">
+                    <label>Sunday</label>
+                    <input type="text" placeholder="Not available">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="profile-actions">
+              <button type="button" class="btn btn-outline" onclick="window.history.back()">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Profile image upload
+    document.getElementById('changePhotoBtn').addEventListener('click', function() {
+      document.getElementById('photoUpload').click();
+    });
+
+    document.getElementById('photoUpload').addEventListener('change', function(e) {
+      if (e.target.files && e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          document.getElementById('profileImage').src = event.target.result;
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      }
+    });
+
+    // Tags functionality
+    document.getElementById('specializationsInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && this.value.trim()) {
+        addTag(this.value.trim(), 'specializationsContainer');
+        this.value = '';
+        e.preventDefault();
+      }
+    });
+
+    document.getElementById('languagesInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && this.value.trim()) {
+        addTag(this.value.trim(), 'languagesContainer');
+        this.value = '';
+        e.preventDefault();
+      }
+    });
+
+    function addTag(value, containerId) {
+      const container = document.getElementById(containerId);
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.innerHTML = `${value}<i class="fas fa-times"></i>`;
+      container.insertBefore(tag, container.lastElementChild);
+      
+      // Add remove functionality
+      tag.querySelector('i').addEventListener('click', function() {
+        tag.remove();
+      });
+    }
+
+    // Remove existing tags
+    document.querySelectorAll('.tag i').forEach(icon => {
+      icon.addEventListener('click', function() {
+        this.parentElement.remove();
+      });
+    });
+
+    // Form submission
+    document.getElementById('mentorProfileForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Profile updated successfully!');
+      // In a real app, this would submit to your backend
+    });
+  </script>
+</body>
+</html>

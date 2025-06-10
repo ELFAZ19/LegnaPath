@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Mentor Details</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="active">
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>Find Mentors</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Sessions</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <a href="dashboard.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Mentors
+          </a>
+          <h1>Mentor Profile</h1>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="mentor-details-container">
+          <div class="mentor-profile">
+            <div class="profile-header">
+              <img src="../../assets/images/mentor1.jpg" alt="Mentor" class="profile-image">
+              <div class="profile-info">
+                <h2>Dr. Sarah Johnson</h2>
+                <p class="title">Senior Computer Science Professor</p>
+                <div class="rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span>4.8 (24 reviews)</span>
+                </div>
+                <div class="stats">
+                  <div class="stat">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>245 students</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <span>1200 sessions</span>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-actions">
+                <button class="btn btn-primary request-mentor" id="requestMentorBtn">
+                  <i class="fas fa-handshake"></i> Request Mentorship
+                </button>
+                <button class="btn btn-outline" onclick="location.href='../chat.html'">
+                  <i class="fas fa-comment"></i> Send Message
+                </button>
+              </div>
+            </div>
+            
+            <div class="mentor-content">
+              <div class="mentor-about">
+                <h3>About Me</h3>
+                <p>With over 10 years of experience in teaching computer science, I specialize in helping students understand complex programming concepts through practical examples and real-world applications. My approach focuses on building strong fundamentals while keeping the learning process engaging and practical.</p>
+                
+                <div class="education">
+                  <h4>Education</h4>
+                  <ul>
+                    <li>PhD in Computer Science, Addis Ababa University (2015)</li>
+                    <li>MSc in Software Engineering, AAU (2010)</li>
+                    <li>BSc in Computer Science, AAU (2007)</li>
+                  </ul>
+                </div>
+                
+                <div class="experience">
+                  <h4>Professional Experience</h4>
+                  <ul>
+                    <li>Professor of Computer Science, Addis Ababa University (2015-Present)</li>
+                    <li>Senior Software Engineer, Tech Solutions Inc. (2010-2015)</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="mentor-skills">
+                <h3>Skills & Expertise</h3>
+                <div class="skills-list">
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Data Structures</span>
+                  <span class="skill-tag">Algorithms</span>
+                  <span class="skill-tag">Object-Oriented Programming</span>
+                  <span class="skill-tag">Database Systems</span>
+                  <span class="skill-tag">Web Development</span>
+                </div>
+              </div>
+              
+              <div class="mentor-availability">
+                <h3>Availability</h3>
+                <div class="availability-slots">
+                  <div class="slot">
+                    <span class="day">Monday</span>
+                    <span class="time">9:00 AM - 12:00 PM</span>
+                  </div>
+                  <div class="slot">
+                    <span class="day">Wednesday</span>
+                    <span class="time">2:00 PM - 5:00 PM</span>
+                  </div>
+                  <div class="slot">
+                    <span class="day">Friday</span>
+                    <span class="time">10:00 AM - 1:00 PM</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mentor-languages">
+                <h3>Languages Spoken</h3>
+                <div class="languages-list">
+                  <span class="language-tag">English</span>
+                  <span class="language-tag">Amharic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mentor-testimonials">
+            <h3>Student Testimonials</h3>
+            <div class="testimonials-grid">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img src="../../assets/images/student1.jpg" alt="Student">
+                  <div>
+                    <h4>Michael Teka</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>"Dr. Johnson helped me understand complex algorithms that I struggled with for months. Her teaching style is clear and patient."</p>
+                <span class="date">April 2023</span>
+              </div>
+              
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img src="../../assets/images/student2.jpg" alt="Student">
+                  <div>
+                    <h4>Amina Mohammed</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>"Thanks to Dr. Johnson's mentorship, I was able to complete my final year project with confidence. Highly recommend!"</p>
+                <span class="date">March 2023</span>
+              </div>
+              
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img src="../../assets/images/student3.jpg" alt="Student">
+                  <div>
+                    <h4>Daniel Assefa</h4>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                  </div>
+                </div>
+                <p>"The one-on-one sessions were exactly what I needed to improve my programming skills. Dr. Johnson is very knowledgeable."</p>
+                <span class="date">February 2023</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-outline view-all-testimonials">
+              View All Testimonials
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="requestModal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div class="modal-body">
+        <h2>Request Mentorship</h2>
+        <form id="mentorshipRequestForm">
+          <div class="form-group">
+            <label for="requestMessage">Message to Mentor</label>
+            <textarea id="requestMessage" rows="4" placeholder="Briefly explain what you need help with..." required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="preferredTime">Preferred Time</label>
+            <select id="preferredTime" required>
+              <option value="">Select a time slot</option>
+              <option value="mon-9am">Monday 9:00 AM - 12:00 PM</option>
+              <option value="wed-2pm">Wednesday 2:00 PM - 5:00 PM</option>
+              <option value="fri-10am">Friday 10:00 AM - 1:00 PM</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="sessionFrequency">Sessions per Week</label>
+            <select id="sessionFrequency" required>
+              <option value="1">1 session</option>
+              <option value="2" selected>2 sessions</option>
+              <option value="3">3 sessions</option>
+              <option value="4">4 sessions</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="sessionLength">Session Length</label>
+            <select id="sessionLength" required>
+              <option value="1">1 hour</option>
+              <option value="1.5" selected>1.5 hours</option>
+              <option value="2">2 hours</option>
+            </select>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline cancel-request">Cancel</button>
+            <button type="submit" class="btn btn-primary submit-request">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/dashboard.js"></script>
+  <script>
+    document.getElementById('requestMentorBtn').addEventListener('click', function() {
+      document.getElementById('requestModal').classList.add('active');
+    });
+
+    document.querySelector('.cancel-request').addEventListener('click', function() {
+      document.getElementById('requestModal').classList.remove('active');
+    });
+
+    document.getElementById('mentorshipRequestForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // In a real app, this would submit to your backend
+      alert('Mentorship request submitted successfully!');
+      document.getElementById('requestModal').classList.remove('active');
+      // Redirect to payment page
+      window.location.href = 'payment.html';
+    });
+  </script>
+</body>
+</html>

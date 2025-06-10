@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LegnaPath - Mentor Dashboard</title>
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="../../assets/images/logo-white.png" alt="LegnaPath Logo" class="logo">
+        <h2>LegnaPath</h2>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active">
+            <a href="dashboard.html">
+              <i class="fas fa-home"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-user-graduate"></i>
+              <span>My Students</span>
+              <span class="badge">5</span>
+            </a>
+          </li>
+          <li>
+            <a href="../chat.html">
+              <i class="fas fa-comments"></i>
+              <span>Messages</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-calendar-alt"></i>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="applications.html">
+              <i class="fas fa-user-plus"></i>
+              <span>Applications</span>
+              <span class="badge">3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <h1>Welcome, <span id="mentorName">Mentor</span>!</h1>
+          <p>Ready to help students with their learning journey?</p>
+        </div>
+        
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" placeholder="Search students, courses...">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          <div class="user-menu">
+            <div class="notification-bell">
+              <i class="fas fa-bell"></i>
+              <span class="badge">2</span>
+            </div>
+            
+            <div class="user-profile">
+              <img src="../../assets/images/default-avatar.png" alt="User Profile">
+              <div class="user-info">
+                <span class="username" id="displayName">Dr. Sarah Johnson</span>
+                <span class="user-role">Mentor</span>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <div class="content-area">
+        <div class="status-cards">
+          <div class="status-card">
+            <div class="card-icon pending">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-content">
+              <h3>Pending Requests</h3>
+              <p>3 students waiting for approval</p>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon active">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-content">
+              <h3>Active Students</h3>
+              <p>5 current mentoring relationships</p>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon completed">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card-content">
+              <h3>Completed</h3>
+              <p>24 students mentored</p>
+            </div>
+          </div>
+          
+          <div class="status-card">
+            <div class="card-icon earnings">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="card-content">
+              <h3>Earnings</h3>
+              <p>12,450 ETB this month</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="action-buttons">
+            <button class="action-btn" onclick="location.href='#'">
+              <i class="fas fa-calendar-plus"></i>
+              Set Availability
+            </button>
+            <button class="action-btn" onclick="location.href='applications.html'">
+              <i class="fas fa-user-plus"></i>
+              View Requests
+            </button>
+            <button class="action-btn" onclick="location.href='profile.html'">
+              <i class="fas fa-pencil-alt"></i>
+              Update Profile
+            </button>
+          </div>
+        </div>
+        
+        <div class="mentor-section">
+          <div class="section-header">
+            <h2>Recent Student Requests</h2>
+            <a href="applications.html" class="view-all">View All</a>
+          </div>
+          
+          <div class="requests-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Course</th>
+                  <th>Requested On</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="student-info">
+                      <img src="../../assets/images/student1.jpg" alt="Student" style="width: 50%;">
+                      <span>Michael Teka</span>
+                    </div>
+                  </td>
+                  <td>Advanced Python</td>
+                  <td>May 15, 2023</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td>
+                    <button class="btn-small btn-primary">Accept</button>
+                    <button class="btn-small btn-outline">Decline</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="student-info">
+                      <img src="../../assets/images/student.jpg" alt="Student">
+                      <span>Amina Mohammed</span>
+                    </div>
+                  </td>
+                  <td>Data Structures</td>
+                  <td>May 14, 2023</td>
+                  <td><span class="status-badge pending">Pending</span></td>
+                  <td>
+                    <button class="btn-small btn-primary">Accept</button>
+                    <button class="btn-small btn-outline">Decline</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="student-info">
+                      <img src="../../assets/images/student.jpg" alt="Student">
+                      <span>Daniel Assefa</span>
+                    </div>
+                  </td>
+                  <td>Web Development</td>
+                  <td>May 12, 2023</td>
+                  <td><span class="status-badge accepted">Accepted</span></td>
+                  <td>
+                    <button class="btn-small btn-primary">Message</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="mentor-section">
+          <div class="section-header">
+            <h2>Upcoming Sessions</h2>
+            <a href="#" class="view-all">View Calendar</a>
+          </div>
+          
+          <div class="sessions-list">
+            <div class="session-card">
+              <div class="session-time">
+                <div class="session-date">May 18</div>
+                <div class="session-hours">10:00 - 11:30 AM</div>
+              </div>
+              <div class="session-info">
+                <h3>Advanced Python with Michael</h3>
+                <p>Topic: Object-Oriented Programming Concepts</p>
+                <div class="session-actions">
+                  <button class="btn-small btn-outline"><i class="fas fa-video"></i> Join</button>
+                  <button class="btn-small btn-outline" onclick="location.href='../chat.html'"><i class="fas fa-comment"></i> Message</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="session-card">
+              <div class="session-time">
+                <div class="session-date">May 19</div>
+                <div class="session-hours">2:00 - 3:00 PM</div>
+              </div>
+              <div class="session-info">
+                <h3>Data Structures with Amina</h3>
+                <p>Topic: Binary Search Trees Implementation</p>
+                <div class="session-actions">
+                  <button class="btn-small btn-outline"><i class="fas fa-video"></i> Join</button>
+                  <button class="btn-small btn-outline" onclick="location.href='../chat.html'"><i class="fas fa-comment"></i> Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>
