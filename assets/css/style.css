@@ -611,6 +611,14 @@ img {
     justify-content: center;
   }
 }
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   .main-nav {
@@ -618,11 +626,14 @@ img {
   }
   
   .mobile-menu-btn {
-    display: block;
+    display: none;
   }
   
   .section-title {
     font-size: 1.8rem;
+  }
+  .auth-buttons {
+    display: none !important;
   }
 }
 
